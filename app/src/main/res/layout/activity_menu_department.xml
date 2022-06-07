@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuDepartment">
+
+    <EditText
+        android:id="@+id/etNomeDept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Nome do Departamento"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/btCadastrarDept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btCadastrarDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etNomeDept"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btEditarDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Editar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etIdDept"
+        app:layout_constraintTop_toBottomOf="@+id/btCadastrarDept" />
+
+    <Button
+        android:id="@+id/btGetAlldept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Pegar Departamentos"
+        android:onClick="executarRequestGetAllDepts"
+        app:layout_constraintEnd_toStartOf="@+id/btDeletarDept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeDept" />
+
+    <Button
+        android:id="@+id/btDeletarDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Deletar"
+        android:onClick="executarRequestDeleteDepts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btGetAlldept"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeDept" />
+
+    <ListView
+        android:id="@+id/lvListaDepts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#C9C9C9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btGetAlldept" />
+
+    <EditText
+        android:id="@+id/etIdDept"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Id do departamento"
+        app:layout_constraintEnd_toStartOf="@+id/btEditarDept"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNomeDept" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
